@@ -1,0 +1,211 @@
+@import '../../App.css';
+
+.box-bg-bar {
+  position: relative;
+  padding: 70px;
+  width: 99%;
+  height: 3rem;
+  background-color: #ffff;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.box-s-wh {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lh {
+  color: var(--color-font-bar);
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.menu-item {
+  display: none;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.rh ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.75rem;
+  margin-right: 1.75rem;
+  list-style: none;
+}
+
+.rh li {
+  position: relative;
+  margin-left: 1.75rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-font-bar);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.rh ul li::after {
+  content: '';
+  left: 0;
+  bottom: -6px;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #88efff;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: transform .5s;
+}
+
+.rh ul li:hover::after {
+  transform: scaleX(1);
+}
+.menuMobile{
+  display: none;
+}
+
+@media screen and (max-width:1200px) {
+  .box-bg-bar {
+    margin-top: -1rem;
+    border-radius: 0;
+    background-color: #ffff;
+    filter: none;
+  }
+
+  .lh {
+    font-size: 20px;
+  }
+
+  .rh {
+    display: none;
+  }
+
+  .menu-item {
+    display: block;
+    margin-left: 1rem;
+    font-size: 30px;
+  }
+
+  .menuMobile {
+    display: block;
+    position: absolute;
+    top: 6rem;
+    right: 0;
+    width: auto;
+    height: auto;
+    background-color: #ffff;
+    animation-duration: .2s;
+    animation-name: menulogin;
+    animation-timing-function: ease-in-out;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 20px;
+  }
+
+  nav ul li {
+    cursor: pointer;
+    margin-bottom: 1rem;
+    font-size: 20px;
+  }
+
+  .menuMobile::before {
+    content: '';
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #88efff;
+
+  }
+}
+
+/*@media screen and (max-width:1200px) {
+  
+} */
+@media screen and (max-width:600px) {
+  .box-bg-bar {
+    margin-top: -1rem;
+    border-radius: 0;
+    background-color: #ffff;
+    filter: none;
+  }
+
+  .lh {
+    font-size: 20px;
+  }
+
+  .rh {
+    display: none;
+  }
+
+  .menu-item {
+    display: block;
+    margin-left: 1rem;
+    font-size: 30px;
+  }
+
+  .menuMobile {
+    display: block;
+    position: absolute;
+    top: 6rem;
+    right: 0;
+    width: auto;
+    height: auto;
+    background-color: #ffff;
+    animation-duration: .2s;
+    animation-name: menulogin;
+    animation-timing-function: ease-in-out;
+  }
+
+  nav ul {
+    cursor: pointer;
+    list-style: none;
+    padding: 20px;
+  }
+
+  nav ul li {
+    margin-bottom: 1rem;
+    font-size: 20px;
+  }
+
+  .menuMobile::before {
+    content: '';
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #88efff;
+
+  }
+}
+
+@keyframes menulogin {
+  0% {
+    opacity: 0;
+    right: -1.5rem;
+  }
+
+  25% {
+    opacity: 0.2;
+    right: -0.7rem;
+  }
+
+  75% {
+    opacity: 0.5;
+    right: -0.5;
+  }
+
+  100% {
+    opacity: 0.9;
+    right: 0;
+  }
+}
