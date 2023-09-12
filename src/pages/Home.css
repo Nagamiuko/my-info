@@ -12,6 +12,7 @@ section .container{
   max-width: 1320px;
   margin: 0 auto;
 }
+
 .title{
    position: relative;
    padding: 1.5rem;
@@ -74,7 +75,7 @@ section .container{
    margin-bottom: 0.5rem;
 }
 .r-c a{
-  color: #474747dd;
+  color: #393939;
 }
 
 .flex-gap{
@@ -104,7 +105,7 @@ section .container{
    cursor: pointer;
    transition: 0.3s;
 }
-.btn-sun .btn-c{
+.btn-sun .btn-c {
    background-color: #393939;
    color: #fff;
    outline: none;

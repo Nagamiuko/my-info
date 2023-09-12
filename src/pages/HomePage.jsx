@@ -14,12 +14,12 @@ import {
   faServer,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
-import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs ,FaLine} from "react-icons/fa";
-import { BiLogoSass, BiLogoMongodb, } from "react-icons/bi";
+import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaLine } from "react-icons/fa";
+import { BiLogoSass, BiLogoMongodb } from "react-icons/bi";
 import { RiJavascriptFill } from "react-icons/ri";
 import { SiExpress } from "react-icons/si";
 import { DiMysql } from "react-icons/di";
-import { BsFacebook ,BsFillTelephoneFill} from "react-icons/bs";
+import { BsFacebook, BsFillTelephoneFill, BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import Footer from "../components/footer/Footer";
 const HomePage = () => {
@@ -65,7 +65,12 @@ const HomePage = () => {
                         <button className="btn-d" onClick={() => openPdf()}>
                           ดาวน์โหลด CV
                         </button>
-                        <button className="btn-c">ข้อมูลติดต่อ </button>
+                        <a href="#contact">
+                          <button className="btn-c">ข้อมูลติดต่อ</button>
+                        </a>
+                        <button className="btn-d">
+                          <BsGithub style={{ fontSize: "15px" }} /> Git
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -240,8 +245,18 @@ const HomePage = () => {
                     </div>
                     <div className="r-c">
                       <div className="btn-sun">
-                        <button className="btn-d"><a target="_black" href="https://github.com/Nagamiuko/project_final.git">GitHup</a></button>
-                        <button className="btn-d"><a href="https://project-final-eight.vercel.app/" target="_black">Live Demo</a></button>
+                        <a
+                          target="_black"
+                          href="https://github.com/Nagamiuko/project_final.git"
+                        >
+                          <button className="btn-d">GitHup</button>
+                        </a>
+                        <a
+                          href="https://project-final-eight.vercel.app/"
+                          target="_black"
+                        >
+                          <button className="btn-d">Live Demo</button>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -261,29 +276,43 @@ const HomePage = () => {
                 <div className="flex-gap">
                   <div className="box-exp">
                     <div className="r-c">
-                      <h4 style={{ fontSize: "1rem" , color:"#474747dd"}}>
-                      <FontAwesomeIcon icon={faEnvelope} style={{fontSize:"2.2rem"}} />  <a  href="mailto:puttisan.7353@gmail.com">puttisan.7353@gmail.com</a>
+                      <h4 style={{ fontSize: "1rem", color: "#474747dd" }}>
+                        <FontAwesomeIcon
+                          icon={faEnvelope}
+                          style={{ fontSize: "2.2rem" }}
+                        />{" "}
+                        <a href="mailto:puttisan.7353@gmail.com">
+                          puttisan.7353@gmail.com
+                        </a>
                       </h4>
                     </div>
                   </div>
                   <div className="box-exp">
-                  <div className="r-c">
-                      <h4 style={{ fontSize: "1rem" , color:"#474747dd"}}>
-                      <BsFacebook style={{fontSize:"2rem"}} />  <a  href="https://web.facebook.com/Miyalodont/" target="_blck">Masaoli Tisan</a>
+                    <div className="r-c">
+                      <h4 style={{ fontSize: "1rem", color: "#474747dd" }}>
+                        <BsFacebook style={{ fontSize: "2rem" }} />{" "}
+                        <a
+                          href="https://web.facebook.com/Miyalodont/"
+                          target="_blck"
+                        >
+                          Masaoli Tisan
+                        </a>
                       </h4>
                     </div>
                   </div>
                   <div className="box-exp">
-                  <div className="r-c">
-                      <h4 style={{ fontSize: "1rem" , color:"#474747dd"}}>
-                      <FaLine style={{fontSize:"2rem"}} /> Line ID : tisan_retrun
+                    <div className="r-c">
+                      <h4 style={{ fontSize: "1rem", color: "#474747dd" }}>
+                        <FaLine style={{ fontSize: "2rem" }} /> Line ID :
+                        tisan_retrun
                       </h4>
                     </div>
                   </div>
                   <div className="box-exp">
-                  <div className="r-c">
-                      <h4 style={{ fontSize: "1rem" , color:"#474747dd"}}>
-                      <BsFillTelephoneFill style={{fontSize:"1.8rem"}} /> :  0628607353
+                    <div className="r-c">
+                      <h4 style={{ fontSize: "1rem", color: "#474747dd" }}>
+                        <BsFillTelephoneFill style={{ fontSize: "1.8rem" }} /> :
+                        0628607353
                       </h4>
                     </div>
                   </div>
@@ -294,7 +323,7 @@ const HomePage = () => {
         </div>
       </section>
       <footer>
-          <Footer/>
+        <Footer />
       </footer>
     </div>
   );
