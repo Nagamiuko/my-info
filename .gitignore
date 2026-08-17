@@ -10,7 +10,16 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+.output
+.nuxt
+.nitro
+.data
 *.local
+.env
+
+# Prisma
+prisma/dev.db
+prisma/*.db-journal
 
 # Editor directories and files
 .vscode/*
