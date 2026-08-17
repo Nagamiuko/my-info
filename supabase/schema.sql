@@ -45,9 +45,8 @@ create policy "admin_read_admin_users"
   using (request.headers['x-admin-secret'] = 'FrhB4HXu4PvSmj7YlnrVC3Up4UEAH7IG');
 
 -- ---------- บัญชีแอดมินเริ่มต้น ----------
--- username: admin / password: admin123  (เปลี่ยนได้ที่หน้าเว็บ-admin)
 insert into public.admin_users (username, password_hash)
-values ('admin', '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9')
+values ('root', '82433a0ab776d1563e2078a88cf3cd2a6dfa269d61ff2280b087c6e9d75aa8aa')
 on conflict (username) do nothing;
 
 -- ---------- ข้อมูลเริ่มต้น (seed) ----------

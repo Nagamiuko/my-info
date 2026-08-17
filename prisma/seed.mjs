@@ -17,13 +17,13 @@ async function main() {
   const created = await prisma.siteContent.createMany({ data: rows, skipDuplicates: true })
   console.log(`seed site_content: ${created.count} แถว (ข้ามรายการที่มีอยู่แล้ว)`)
 
-  // บัญชีแอดมินเริ่มต้น: admin / admin123
+  // บัญชีแอดมินเริ่มต้น: root / (รหัสผ่านตาม config)
   await prisma.adminUser.upsert({
-    where: { username: 'admin' },
+    where: { username: 'root' },
     update: {},
-    create: { username: 'admin', passwordHash: hash('admin123') },
+    create: { username: 'root', passwordHash: hash('4cr3J%v2xd') },
   })
-  console.log('seed admin_users: พร้อม (admin / admin123)')
+  console.log('seed admin_users: พร้อม (root)')
 }
 
 main()
